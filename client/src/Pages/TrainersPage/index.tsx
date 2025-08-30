@@ -35,10 +35,9 @@ function TrainersPage() {
   }, []);
 
   const handleAddTrainer = async (values: any) => {
-    console.log("Добавляем тренера:", values);
+    setModalOpen(false);
     await addTrainer(values);
     await fetchDataTrainers();
-    setModalOpen(false);
     form.resetFields();
   };
 

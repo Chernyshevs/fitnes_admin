@@ -142,9 +142,6 @@ const SubscriptionModal: React.FC<SubscriptionModalProps> = ({
 
   const handleDeleteSubscription = async (id: number) => {
     const sub = subscriptions.find((s) => s.id === id);
-    console.log(
-      `Удалён абонемент ID ${id} (${sub?.type}, спорт: ${sub?.sport.name})`
-    );
     await deleteSubscription(id);
     await fetchDataClients();
     setSubscriptions((subs) => subs.filter((s) => s.id !== id));

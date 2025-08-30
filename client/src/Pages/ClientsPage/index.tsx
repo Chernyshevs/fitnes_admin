@@ -23,10 +23,10 @@ function ClientsPage() {
     setOpenAddClientModal(false);
   };
   const handleAddClient: FormProps["onFinish"] = async (values) => {
+    setOpenAddClientModal(false);
     await addClient(values);
     await fetchDataClients();
     form.resetFields();
-    setOpenAddClientModal(false);
   };
   const handleDeleteClient = async (id: number) => {
     try {

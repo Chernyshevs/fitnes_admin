@@ -41,10 +41,9 @@ function SportsPage() {
 
   const handleAddSport: FormProps["onFinish"] = async (values) => {
     try {
-      await addSport(values);
-      console.log(values);
-      await fetchSports();
       closeAddModal();
+      await addSport(values);
+      await fetchSports();
     } catch {
       alert("Ошибка при добавлении вида спорта");
     }
