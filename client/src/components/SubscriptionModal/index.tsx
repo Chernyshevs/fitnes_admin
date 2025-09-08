@@ -141,7 +141,6 @@ const SubscriptionModal: React.FC<SubscriptionModalProps> = ({
   };
 
   const handleDeleteSubscription = async (id: number) => {
-    const sub = subscriptions.find((s) => s.id === id);
     await deleteSubscription(id);
     await fetchDataClients();
     setSubscriptions((subs) => subs.filter((s) => s.id !== id));
