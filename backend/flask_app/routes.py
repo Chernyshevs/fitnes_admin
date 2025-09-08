@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 from datetime import datetime, timedelta
-from . import db
-from .models import Client, Trainer, Sport, Subscription
-from .helpers import calculate_expiration_date
+from __init__ import db
+from models import Client, Trainer, Sport, Subscription
+from helpers import calculate_expiration_date
 
 bp = Blueprint('routes', __name__)
 

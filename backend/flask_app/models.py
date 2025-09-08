@@ -1,4 +1,4 @@
-from . import db
+from __init__ import db
 
 client_trainer = db.Table('client_trainer',
     db.Column('client_id', db.Integer, db.ForeignKey('clients.id'), primary_key=True),
